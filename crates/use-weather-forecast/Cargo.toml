@@ -1,0 +1,21 @@
+[package]
+name = "use-weather-forecast"
+description = "Primitive forecast vocabulary for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-weather-forecast"
+keywords = ["meteorology", "forecast", "weather", "nowcast", "rustuse"]
+categories = ["data-structures", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

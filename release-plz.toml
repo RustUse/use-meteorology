@@ -1,0 +1,99 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-weather-observation"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-atmosphere"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-air-temperature"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-atmospheric-pressure"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-humidity"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-wind"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-cloud"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-precipitation"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-weather-front"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-pressure-system"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-weather-forecast"
+release = true
+version_group = "rustuse-meteorology"
+
+[[package]]
+name = "use-meteorology"
+release = true
+version_group = "rustuse-meteorology"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-weather-observation",
+  "use-atmosphere",
+  "use-air-temperature",
+  "use-atmospheric-pressure",
+  "use-humidity",
+  "use-wind",
+  "use-cloud",
+  "use-precipitation",
+  "use-weather-front",
+  "use-pressure-system",
+  "use-weather-forecast",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]
