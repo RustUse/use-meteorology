@@ -30,7 +30,7 @@ jobs:
               use-weather-observation use-atmosphere use-air-temperature use-atmospheric-pressure use-humidity use-wind use-cloud use-precipitation use-weather-front use-pressure-system use-weather-forecast
         steps:
             - name: Check out repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
                   persist-credentials: false
